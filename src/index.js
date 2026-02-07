@@ -52,7 +52,7 @@ const startServer = async () => {
         // Use { alter: true } to alter tables to match models
         await syncDatabase({ alter: false });
 
-        app.listen(PORT, () => {
+        app.listen(PORT, '0.0.0.0', () => {
             console.log(`Server is running on http://localhost:${PORT}`);
             console.log(`Money Management Project`);
         });
